@@ -1,5 +1,5 @@
 <!--The content below is only a placeholder and can be replaced.-->
-<div style="text-align:center">
+<!-- <div style="text-align:center">
   <h1>
     Welcome to {{ title }}!
   </h1>
@@ -16,6 +16,40 @@
   <li>
     <h2><a target="_blank" rel="noopener" href="https://blog.angular.io/">Angular blog</a></h2>
   </li>
-</ul>
+</ul> -->
+
+<p-accordion>
+  <p-accordionTab header="Salads">
+    Salads...
+  </p-accordionTab>
+  <p-accordionTab header="Pasta">
+    Pasta...
+  </p-accordionTab>
+  <p-accordionTab header="Pizza" [selected]="true">
+    <p-radioButton
+      label="Double cheese 🧀🧀"
+      name="pizza"
+      value="double-cheese"
+      [(ngModel)]="pizzaSelection">
+    </p-radioButton><br>
+
+    <p-radioButton
+      label="Anchovy"
+      name="pizza"
+      value="anchovy"
+      [(ngModel)]="pizzaSelection">
+    </p-radioButton><br>
+
+    <p-radioButton
+      label="Meat lover's 🍖"
+      name="pizza"
+      value="meat-lover"
+      [(ngModel)]="pizzaSelection">
+    </p-radioButton>
+  </p-accordionTab>
+</p-accordion>
+
+<br>
+
 
 <router-outlet></router-outlet>
